@@ -11,7 +11,9 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'demo2';
+  counter = 0;
   search(){
     console.log('search');
+    ++this.counter;
   }
 }
