@@ -12,8 +12,19 @@ import { HeaderComponent } from './header/header.component';
 export class AppComponent {
   title = 'demo2';
   counter = 0;
-  search(){
+  search(event:MouseEvent){
+    console.log(event.x);
     console.log('search');
     ++this.counter;
+  }
+
+  inputKey(event:KeyboardEvent){
+    if(event.key === 'Enter')
+    console.log((event.target as HTMLInputElement).value);
+  }
+
+  inputByenter(event:Event){
+
+    console.log(event);
   }
 }
