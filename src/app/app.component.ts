@@ -24,7 +24,8 @@ export class AppComponent {
   }
 
   inputByenter(event:Event){
-
-    console.log(event);
+    // enter KeyboardEvent angular16有問題要轉型
+    const newEvent = event as KeyboardEvent;
+    console.log(newEvent);
   }
 }
