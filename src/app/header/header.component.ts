@@ -11,4 +11,12 @@ import { CommonModule } from '@angular/common';
 export class HeaderComponent {
   title ='Test';
   url = 'Test1';
+  isHighlight = false;
+  h3Color = 'red';
+  toggleHighlight() {
+    this.isHighlight = !this.isHighlight;
+    this.h3Color = this.h3Color === 'red' ? 'black' : 'red';
+  }
 }
+
+
