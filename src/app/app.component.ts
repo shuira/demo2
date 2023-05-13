@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule,HeaderComponent],
+  imports: [CommonModule,HeaderComponent,FormsModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'demo2';
   counter = 0;
+  keyword = '';
   search(event:MouseEvent){
     console.log(event.x);
     console.log('search');
